@@ -1,0 +1,148 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaukite kreditą - Kredito Kortelė</title>
+    
+    <!-- Meta description for SEO -->
+    <meta name="description" content="Gaukite kreditą greitai ir lengvai su mūsų kreditinės kortelės paslauga. Atraskite geriausias galimybes ir kreipkitės šiandien.">
+    
+    <!-- Meta keywords for SEO -->
+    <meta name="keywords" content="kreditas, kreditinė kortelė, gauti kreditą, paskola, finansai, kredito paslaugos">
+    
+    <!-- Open Graph Meta Tags for social media sharing -->
+    <meta property="og:title" content="Gaukite kreditą - Kredito Kortelė">
+    <meta property="og:description" content="Gaukite kreditą greitai ir lengvai su mūsų kreditinės kortelės paslauga. Atraskite geriausias galimybes ir kreipkitės šiandien.">
+    <meta property="og:image" content="URL_de_l_image_de_votre_service.jpg">
+    <meta property="og:url" content="URL_de_votre_page.html">
+    
+    <!-- Logo SVG Style -->
+    <style>
+        .logo {
+            display: inline-block;
+            text-decoration: none;
+            padding: 10px;
+        }
+        
+        .logo svg {
+            max-width: 150px;
+            height: auto;
+            vertical-align: middle;
+        }
+        
+        .logo:hover {
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .logo svg {
+                max-width: 120px;
+            }
+        }
+    </style>
+
+    <!-- Logo SVG Definition -->
+    <svg style="display: none;">
+        <symbol id="credit-card-logo" viewBox="0 0 300 100">
+            <!-- Card Shape -->
+            <rect x="40" y="20" width="160" height="100" rx="10" fill="#003366"/>
+            <rect x="45" y="25" width="150" height="90" rx="8" fill="#0066cc" opacity="0.8"/>
+            
+            <!-- Chip -->
+            <rect x="60" y="45" width="30" height="25" rx="3" fill="#e6f2ff"/>
+            <rect x="65" y="50" width="20" height="3" fill="#003366"/>
+            <rect x="65" y="56" width="20" height="3" fill="#003366"/>
+            <rect x="65" y="62" width="20" height="3" fill="#003366"/>
+            
+            <!-- Text -->
+            <text x="220" y="65" font-family="Arial, sans-serif" font-weight="bold" font-size="24" fill="#003366">CRÉDIT</text>
+            <text x="220" y="90" font-family="Arial, sans-serif" font-weight="bold" font-size="24" fill="#0066cc">CARD</text>
+            
+            <!-- Decorative Lines -->
+            <path d="M100 80 Q 120 70, 140 80" stroke="#e6f2ff" stroke-width="2" fill="none"/>
+            <path d="M110 85 Q 130 75, 150 85" stroke="#e6f2ff" stroke-width="2" fill="none"/>
+        </symbol>
+    </svg>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "70WwzbbTAv0wkjt0F",
+            });
+        })();
+    </script>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="quiz-container">
+    <div class="company-name">Kredito Kortelė</div>
+    <div class="quiz-image"></div>
+    <h1>Paskolos gavimo klausimynas</h1>
+    <div id="quiz">
+      <p class="question fade-in" id="question"></p>
+      <div class="answers fade-in" id="answers"></div>
+      <div class="navigation">
+        <button id="prevBtn" class="nav-btn" disabled>Ankstesnis</button>
+      </div>
+    </div>
+    <div class="progress-bar">
+      <div class="progress" id="progress"></div>
+    </div>
+    <div id="contact-form" style="display: none;" class="contact-form fade-in">
+      <div class="form-header">
+        <h2>Kontaktinė forma</h2>
+        <p>Ačiū, kad užpildėte mūsų klausimyną. Prašome užpildyti žemiau esančią formą, kad galėtume su jumis susisiekti su individualiu pasiūlymu.</p>
+      </div>
+      <form id="form">
+        <div class="form-group icon-input">
+          <label for="name">Pilnas vardas</label>
+          <i class="fas fa-user"></i>
+          <input type="text" id="name" name="name" required placeholder="Įveskite savo pilną vardą">
+        </div>
+        <div class="form-group icon-input">
+          <label for="email">El. pašto adresas</label>
+          <i class="fas fa-envelope"></i>
+          <input type="email" id="email" name="email" required placeholder="Įveskite savo el. pašto adresą">
+        </div>
+        <div class="form-group icon-input">
+          <label for="phone">Telefono numeris</label>
+          <i class="fas fa-phone"></i>
+          <input type="tel" id="phone" name="phone" required placeholder="Įveskite savo telefono numerį">
+        </div>
+        <div class="form-group">
+          <label for="message">Žinutė (neprivaloma)</label>
+          <textarea id="message" name="message" rows="4" placeholder="Jei turite klausimų ar komentarų, galite juos pridėti čia"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Siųsti užklausą</button>
+      </form>
+      <div class="form-footer">
+        Pateikdami šią formą, sutinkate, kad mes naudotume jūsų informaciją pagal mūsų privatumo politiką.
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2024 Kredito Kortelė. Visos teisės saugomos.</p>
+      <p><a href="#">Privatumo politika</a> | <a href="#">Naudojimo sąlygos</a></p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </footer>
+  </div>
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <h2>Ačiū už jūsų užklausą!</h2>
+      <p>Mes gavome jūsų užklausą. Konsultantas netrukus susisieks su jumis su individualiu pasiūlymu.</p>
+      <button id="closePopup" class="submit-btn">Uždaryti</button>
+    </div>
+  </div>
+  <div id="loader" class="loader"></div>
+
+  <script src="script.js">
+    
+  </script>
+</body>
+</html>
