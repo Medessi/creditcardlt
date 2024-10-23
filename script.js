@@ -145,7 +145,7 @@ const templateParams = {
 };
 
 // Appel à EmailJS pour envoyer l'email
-emailjs.send('service_acugylm', 'template_43w8pob', templateParams)
+emailjs.send('service_5tixmoz', 'template_4avnotm', templateParams)
   .then(() => {
     console.log('Email envoyé avec succès');
     form.reset();
